@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+                      http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!-- Activiti引擎配置 -->
+  <!-- 配置默认的Activiti引擎配置管理器 -->
+  <bean id="processEngineConfiguration"
+    class="org.activiti.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration">
+    <!-- 设置数据库类型 -->
+    <property name="databaseType" value="h2"/>
+    <!-- 配置数据库脚本更新策略（如果Activiti的表不存在将会自动创建） -->
+    <property name="databaseSchemaUpdate" value="true"/>
+    <!-- 是否启用作业执行功能 -->
+    <property name="jobExecutorActivate" value="false"/>
+    <!-- 设置记录历史的级别 -->
+    <property name="history" value="full"/>
+  </bean>
+</beans>

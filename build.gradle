@@ -1,0 +1,32 @@
+group 'io.github'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'war'
+apply plugin: 'idea'
+
+repositories {
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+}
+
+dependencies {
+    // Spring
+    compile 'org.springframework:spring-context:4.3.10.RELEASE'
+    // Spring MVC
+    compile 'org.springframework:spring-webmvc:4.3.10.RELEASE'
+    // Activiti
+    compile 'org.activiti:activiti-engine:5.22.0'
+    //Spring Activiti
+    compile 'org.activiti:activiti-spring:5.22.0'
+    //Alibaba FastJson
+    compile 'com.alibaba:fastjson:1.2.37'
+    //Jackson
+    compile 'com.fasterxml.jackson.core:jackson-core:2.9.0'
+    //H2 Database
+    compile 'com.h2database:h2:1.4.196'
+    //Javax Servlet API
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    //Spring Test
+    testCompile 'org.springframework:spring-test:4.3.10.RELEASE'
+    //JUnit 4.12
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
