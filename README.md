@@ -1,2 +1,7 @@
-# activiti-demo
-Activiti实例项目
+# Activiti实例  
+
+## 目的  
+学习《Activiti实战》一书练手的项目  
+
+## 已完成  
+- 一个最简单的流程编写，并成功通过单元测试
